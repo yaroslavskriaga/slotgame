@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1>Slot Game!</h1>
+    <div class="machinecenter">
+      <table id="reelsborders">
+        <tr>
+          <td class="opacity"><img src="./img/3.png" name="left1"></td>
+          <td class="opacity"><img src="./img/3.png" name="center1"></td>
+          <td class="opacity"><img src="./img/3.png" name="right1"></td>
+        </tr>
+        <tr>
+          <td><img src="./img/3.png" name="left2"></td>
+          <td><img src="./img/3.png" name="center2"></td>
+          <td><img src="./img/3.png" name="right2"></td>
+        </tr>
+        <tr>
+          <td class="opacity"><img src="./img/3.png" name="left3"></td>
+          <td class="opacity"><img src="./img/3.png" name="center3"></td>
+          <td class="opacity"><img src="./img/3.png" name="right3"></td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="center">
+
+      <div class="toggle-button-cover">
+        <div class="button-cover">
+          <div class="button r" id="button-1">
+            <input type="checkbox" class="checkbox" @click="isHidden = !isHidden">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+          <span id="coins">Change mode</span>
+        </div>
+      </div>
+      <div v-if="!isHidden">
+
+        <button :disabled="disabled" @click="delay" class="buttonspin" type="button" name="button">Spin</button>
+        <h2>Balance</h1>
+          <span id="coins">Enter balance:</span>
+          <input id="balanceinputchecked" v-model="balance" type="text"> <span id="coins">coins</span>
+          <hr>
+
+
+
+
+          <div id="tableinfo" class="container">
+            <h2>Payments</h1>
+              <table id="infotable" class="table table-dark">
+                <thead>
+                  <tr>
+                    <th>History of wins</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  </tr>
+                  <tr>
+                  </tr>
+                  <tr>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+      </div>
+
+      <div v-if="isHidden">
+        <span id="coins">Enter balance:</span>
+
+        <input id="balanceinputchecked" v-model="balance" type="text">
+
+        <span id="coins">Reel:</span>
+        <select id="dropdownreels">
+          <option value="left">Left</option>
+          <option value="center">Center</option>
+          <option value="right">Right</option>
+        </select>
+
+        <span id="coins">Position:</span>
+        <select id="dropdownpositions">
+          <option value="top">Top</option>
+          <option value="center">Center</option>
+          <option value="bottom">Bottom</option>
+        </select>
+
+        <span id="coins">Value:</span>
+        <select @change="slotmachinefixedmode($event)" id="dropdownsymbols">
+          <option value="BAR">BAR</option>
+          <option value="2xBAR">2xBAR</option>
+          <option value="3xBAR">3xBAR</option>
+          <option value="7">7</option>
+          <option value="CHERRY">CHERRY</option>
+        </select>
+        <button :disabled="disabled" @click="delaytest" class="buttontest" type="button" name="button" >Test</button>
+        <hr>
+        <div id="tableinfo" class="container">
+          <h2>Payments</h1>
+            <table id="infotable" class="table table-dark">
+              <thead>
+                <tr>
+                  <th>History of wins</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Prizes</h2>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th>Cherry and 7s</th>
+              <th>Bars and 7s</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>3 CHERRY symbols on bottom line - 4000</td>
+            <td>3 3xBAR symbols on any line - 50</td>
+          </tr>
+          <tr>
+            <td>3 CHERRY symbols on top line - 2000</td>
+            <td>3 2xBAR symbols on any line - 20</td>
+          </tr>
+          <tr>
+            <td>3 CHERRY symbols on center line - 1000</td>
+            <td>3 BAR symbols on any line - 10</td>
+          </tr>
+          <tr>
+            <td>Any combination of CHERRY and 7 on any line - 75</td>
+            <td>Any combination of BAR symbols on any line - 5</td>
+          </tr>
+          <tr>
+            <td>3 7 symbols on any line 150</td>
+            <td>3 7 symbols on any line 150</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src="main.js"></script>
+<script type="text/javascript">
+  let input = document.getElementById('balanceinputchecked');
+
+  input.addEventListener('keyup', function() {
+    if (this.value > 5000) {
+      let arr = this.value.split('');
+      arr = arr.slice(0, arr.length - 1);
+      this.value = arr.join('');
+    } else if (this.value < 1) {
+      let arr = this.value.split('');
+      arr = arr.slice(0, arr.length - 1);
+      this.value = arr.join('');
+    }
+  })
+</script>
+
+</html>
