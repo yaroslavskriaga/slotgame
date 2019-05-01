@@ -344,7 +344,7 @@ new Vue({
           span.classList.remove("win");
 
         } else if (!span.classList.contains("win")) {
-
+          span.classList.add("ifnotcontainwinclass");
         }
 
 
@@ -359,7 +359,7 @@ new Vue({
 
       //Payment table as well
       var table = document.getElementById("infotable");
-      ъ
+
       //Path to images
       var Directory = "./img/";
       var list = new Array();
@@ -745,6 +745,9 @@ new Vue({
         //Payment table
         var table = document.getElementById("infotable");
 
+        //Mark win balance
+        var span = document.getElementById('currentbalance')
+
         //First line matching
         //Cut the right path before each match
         var finalleft1 = document.left1.src
@@ -1052,6 +1055,7 @@ new Vue({
           span.classList.remove("win");
 
         } else if (!span.classList.contains("win")) {
+          span.classList.add("ifnotcontainwinclass");
 
         }
 
