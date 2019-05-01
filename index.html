@@ -17,7 +17,7 @@
       <div class="randommodecenterelements" v-if="!isHidden">
         <button :disabled="disabled" @click="delay" class="buttonspin" type="button" name="button">Spin</button>
         <span id="coins">Enter balance:</span>
-        <input v-on:keypress="checkinput(event)" id="balanceinputchecked" v-model="balance" type="text"> <span id="coins">coins</span>
+        <input v-on:keypress="checkinput(event)" id="balanceinputchecked" v-model="balance" type="text"> <span id="coins"></span>
       </div>
 
       <div class="fixedmodcenter" v-if="isHidden">
