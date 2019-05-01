@@ -1,5 +1,4 @@
-/*BACKGROUND*/
-
+/*BACKGROUND GRADIENT*/
 body {
   background-image: url("./img/Dark Ocean.jpg");
   width: 100%;
@@ -16,28 +15,8 @@ body {
   letter-spacing: .1em;
 }
 
-
-/*HEADINGS*/
-
-h1 {
-  text-align: center;
-  border-top: 2px outset #e0dfdc;
-  border-bottom: 1px outset #e0dfdc;
-  box-shadow: inset 0 -1px 0 0 #e0dfdc, inset 0 1px 0 0 #e0dfdc, 0 1px 0 0 #e0dfdc, 0 -1px 0 0 #046ca3;
-  margin-bottom: 1px;
-  color: #e0dfdc;
-  letter-spacing: .1em;
-  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
-}
-
-h2 {
-  text-align: center;
-  color: #e0dfdc;
-  letter-spacing: .1em;
-  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
-}
-
-/*SLOT_MACHINE_SPIN_BUTTON AND MACHINE*/
+/*BUTTONS*/
+/*SLOT_MACHINE_SPIN_BUTTON*/
 button.buttonspin {
   color: #e0dfdc;
   letter-spacing: .1em;
@@ -48,109 +27,6 @@ button.buttonspin {
   box-shadow: 0 10px 20px -8px red;
   border-radius: 10px;
 }
-
-/*WIN INDICATOR*/
-
-.win {
-    background-color: red;
-}
-
-div.machinecenter {
-  background-image: url("./img/2019-04-28 6.25.29 PM.jpg");
-  width: 100%;
-  height: 90vh;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 2px outset #e0dfdc;
-  border-bottom: 1px outset #e0dfdc;
-  box-shadow: inset 0 -1px 0 0 #e0dfdc, inset 0 1px 0 0 #e0dfdc, 0 1px 0 0 #e0dfdc, 0 -1px 0 0 #046ca3;
-}
-
-td.opacity {
-  opacity: 0.7;
-}
-
-td {
-  width: 45%;
-}
-
-table#reelsborders {
-  width: 50%;
-  text-decoration: line-through;
-}
-
-/*CONTENT CENTRING AND PAYTABLE*/
-div.center {
-  text-align: center;
-}
-
-div#tableinfo {
-  height: 200px;
-  overflow-y: scroll;
-}
-
-th{
-  color:red;
-}
-
-/*MOBILE_ADAPTING*/
-@media only screen and (min-device-width : 320px) and (max-device-width : 812px) {
-/*SLOTMACHINE*/
-  td {
-    width: 45%;
-  }
-
-  table#reelsborders {
-    width: 80%;
-  }
-
-  div.machinecenter {
-    background-image: url("./img/2019-04-28 6.25.29 PM.jpg");
-    width: 100%;
-    height: 50vh;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 2px outset #e0dfdc;
-    border-bottom: 1px outset #e0dfdc;
-    box-shadow: inset 0 -1px 0 0 #e0dfdc, inset 0 1px 0 0 #e0dfdc, 0 1px 0 0 #e0dfdc, 0 -1px 0 0 #046ca3;
-  }
-}
-
-/*MOBILE_ADAPTING*/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  /*SLOTMACHINE*/
-  td {
-    width: 40%;
-  }
-
-  table#reelsborders {
-    width: 60%;
-  }
-
-  div.machinecenter {
-    background-image: url("./img/2019-04-28 6.25.29 PM.jpg");
-    width: 100%;
-    height: 60vh;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 2px outset #e0dfdc;
-    border-bottom: 1px outset #e0dfdc;
-    box-shadow: inset 0 -1px 0 0 #e0dfdc, inset 0 1px 0 0 #e0dfdc, 0 1px 0 0 #e0dfdc, 0 -1px 0 0 #046ca3;
-  }
-}
-
 
 /*RUN SLOT MACHINE IN A TEST MODE*/
 button.buttontest{
@@ -165,6 +41,9 @@ button.buttontest{
 
 }
 
+div.contentrandom{
+  display: flex;
+}
 
 /*Button for change mode Test-Random*/
 .toggle-button-cover
@@ -266,3 +145,151 @@ button.buttontest{
 }
 
 /*END STYLING MODE SWITCHER*/
+
+
+
+/*HEADINGS*/
+h1 {
+  background-color: blue;
+  text-align: center;
+  border-top: 2px outset #e0dfdc;
+  border-bottom: 1px outset #e0dfdc;
+  box-shadow: inset 0 -1px 0 0 #e0dfdc, inset 0 1px 0 0 #e0dfdc, 0 1px 0 0 #e0dfdc, 0 -1px 0 0 #046ca3;
+  margin-bottom: 1px;
+  color: #e0dfdc;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+h2 {
+  text-align: center;
+  color: #e0dfdc;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+
+/*SLOT MACHINE*/
+
+div.machinecenter {
+  background-image: url("./img/2019-04-28 6.25.29 PM.jpg");
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px outset #e0dfdc;
+  border-bottom: 1px outset #e0dfdc;
+  box-shadow: inset 0 -1px 0 0 #e0dfdc, inset 0 1px 0 0 #e0dfdc, 0 1px 0 0 #e0dfdc, 0 -1px 0 0 #046ca3;
+}
+
+
+/*WIN MARK*/
+.win {
+    background-color: red;
+}
+
+/*REELS TABLE*/
+/*REELS IMITATION*/
+td.opacity {
+  opacity: 0.7;
+}
+
+td {
+  width: 45%;
+}
+
+table#reelsborders {
+  width: 50%;
+  text-decoration: line-through;
+}
+
+/*CONTENT CENTRING AND PAYTABLE*/
+div.randommodecenterelements{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div.fixedmodcenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+div#tableinfo {
+  text-align: center;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+th{
+  color:red;
+}
+
+
+
+
+/*MOBILE_ADAPTING*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 812px) {
+/*SLOTMACHINE*/
+  td {
+    width: 45%;
+  }
+
+  table#reelsborders {
+    width: 75%;
+  }
+
+  div.machinecenter {
+    background-image: url("./img/2019-04-28 6.25.29 PM.jpg");
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px outset #e0dfdc;
+    border-bottom: 1px outset #e0dfdc;
+    box-shadow: inset 0 -1px 0 0 #e0dfdc, inset 0 1px 0 0 #e0dfdc, 0 1px 0 0 #e0dfdc, 0 -1px 0 0 #046ca3;
+  }
+}
+
+
+
+
+
+/*MOBILE_ADAPTING*/
+@media only screen and (min-device-width : 640px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  /*SLOTMACHINE*/
+  td {
+    width: 40%;
+  }
+
+  table#reelsborders {
+    width: 60%;
+  }
+
+  div.machinecenter {
+    background-image: url("./img/2019-04-28 6.25.29 PM.jpg");
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px outset #e0dfdc;
+    border-bottom: 1px outset #e0dfdc;
+    box-shadow: inset 0 -1px 0 0 #e0dfdc, inset 0 1px 0 0 #e0dfdc, 0 1px 0 0 #e0dfdc, 0 -1px 0 0 #046ca3;
+  }
+}

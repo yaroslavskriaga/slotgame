@@ -1,7 +1,7 @@
 new Vue({
   el: '#app',
   data: {
-    balance: '',
+    balance: 3,
     isHidden: false,
     disabled: false,
     timeout: null
@@ -19,6 +19,10 @@ new Vue({
 
       //Payment table
       var table = document.getElementById("infotable");
+
+      //Mark win balance
+      var span = document.getElementById('currentbalance')
+
 
       //Path to images
       var Directory = "./img/";
@@ -46,7 +50,7 @@ new Vue({
         var left3 = Math.floor(Math.random() * 5);
         document.left3.src = list[left3];
 
-        await this.sleep(500);
+        await this.sleep(1000);
 
         //Second reel(center)
         var center1 = Math.floor(Math.random() * 5);
@@ -58,7 +62,7 @@ new Vue({
         var center3 = Math.floor(Math.random() * 5);
         document.center3.src = list[center3];
 
-        await this.sleep(500);
+        await this.sleep(1000);
 
         //Third reel(right)
         var right1 = Math.floor(Math.random() * 5);
@@ -69,6 +73,9 @@ new Vue({
 
         var right3 = Math.floor(Math.random() * 5);
         document.right3.src = list[right3];
+
+        await this.sleep(500);
+
 
         //First line matching
         var final_left1 = list[left1];
@@ -84,6 +91,7 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
 
         } else if ((final_left1 == './img/3.png') && (final_left1 == final_center1) && (final_left1 == final_right1)) {
@@ -94,6 +102,7 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left1 == './img/2.png') && (final_left1 == final_center1) && (final_left1 == final_right1)) {
           var row = table.insertRow(1);
@@ -103,6 +112,7 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left1 == './img/1.png') && (final_left1 == final_center1) && (final_left1 == final_right1)) {
           var row = table.insertRow(1);
@@ -112,6 +122,7 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left1 == './img/0.png') && (final_left1 == final_center1) && (final_left1 == final_right1)) {
           var row = table.insertRow(1);
@@ -121,6 +132,7 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
         } else if (((final_left1 == './img/0.png') || (final_left1 == './img/1.png') || (final_left1 == './img/2.png')) &&
           ((final_center1 == './img/0.png') || (final_center1 == './img/1.png') || (final_center1 == './img/2.png')) &&
@@ -132,6 +144,7 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
 
         } else if (((final_left1 == './img/3.png') || (final_left1 == './img/4.png')) &&
@@ -144,10 +157,12 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
         }
 
 
+        await this.sleep(500);
 
         //Second reel matching
         var final_left2 = list[left2];
@@ -163,6 +178,7 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left2 == './img/3.png') && (final_left2 == final_center2) && (final_left2 == final_right2)) {
           var row = table.insertRow(1);
@@ -172,6 +188,7 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left2 == './img/2.png') && (final_left2 == final_center2) && (final_left2 == final_right2)) {
           var row = table.insertRow(1);
@@ -181,6 +198,7 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left2 == './img/1.png') && (final_left2 == final_center2) && (final_left2 == final_right2)) {
           var row = table.insertRow(1);
@@ -190,6 +208,7 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left2 == './img/0.png') && (final_left2 == final_center2) && (final_left2 == final_right2)) {
           var row = table.insertRow(1);
@@ -199,6 +218,7 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
 
         } else if (((final_left2 == './img/0.png') || (final_left2 == './img/1.png') || (final_left2 == './img/2.png')) &&
           ((final_center2 == './img/0.png') || (final_center2 == './img/1.png') || (final_center2 == './img/2.png')) &&
@@ -210,6 +230,7 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
 
         } else if (((final_left2 == './img/3.png') || (final_left2 == './img/4.png')) &&
           ((final_center2 == './img/3.png') || (final_center2 == './img/4.png')) &&
@@ -221,11 +242,13 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
 
         }
 
 
 
+        await this.sleep(500);
 
         //Third line matching
         var final_left3 = list[left3];
@@ -241,6 +264,7 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left3 == './img/3.png') && (final_left3 == final_center3) && (final_left3 == final_right3)) {
           var row = table.insertRow(1);
@@ -250,6 +274,7 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left3 == './img/2.png') && (final_left3 == final_center3) && (final_left3 == final_right3)) {
           var row = table.insertRow(1);
@@ -259,6 +284,7 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left3 == './img/1.png') && (final_left1 == final_center1) && (final_left3 == final_right3)) {
           var row = table.insertRow(1);
@@ -268,6 +294,7 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left3 == './img/0.png') && (final_left3 == final_center3) && (final_left3 == final_right3)) {
           var row = table.insertRow(1);
@@ -277,6 +304,7 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
 
         } else if (((final_left3 == './img/0.png') || (final_left3 == './img/1.png') || (final_left3 == './img/2.png')) &&
           ((final_center3 == './img/0.png') || (final_center3 == './img/1.png') || (final_center3 == './img/2.png')) &&
@@ -288,6 +316,7 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
 
         } else if (((final_left3 == './img/3.png') || (final_left3 == './img/4.png')) &&
           ((final_center3 == './img/3.png') || (final_center3 == './img/4.png')) &&
@@ -299,6 +328,7 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
         }
 
         await this.sleep(1000);
@@ -315,6 +345,14 @@ new Vue({
         document.right3.classList.remove("win");
         document.center3.classList.remove("win");
         document.left3.classList.remove("win");
+
+        if (span.classList.contains("win")) {
+          span.classList.remove("win");
+
+        } else if (!span.classList.contains("win")) {
+
+        }
+
 
 
       } else {
@@ -701,10 +739,9 @@ new Vue({
 
       this.timeout = setTimeout(() => {
         this.disabled = false
-      }, 2500)
+      }, 4000)
 
       this.slotmachinerandom();
-      this.testmodegetprize();
     },
 
     testmodegetprize: async function() {
@@ -1001,9 +1038,35 @@ new Vue({
 
       this.testmodegetprize();
     },
+
+    checkinput: function(evt) {
+      if (this.balance > 5000) {
+        let arr = this.balance.split('');
+        arr = arr.slice(0, arr.length - 1);
+        this.balance = arr.join('');
+      } else if (this.balance < 1) {
+        let arr = this.balance.split('');
+        arr = arr.slice(0, arr.length - 1);
+        this.balance = arr.join('');
+      }
+
+      evt = (evt) ? evt : window.event;
+      var charCode = (evt.which) ? evt.which : evt.keyCode;
+      if ((charCode > 31 && (charCode < 48 || charCode > 57)) && charCode !== 46) {
+        evt.preventDefault();;
+      } else {
+        return true;
+      }
+    }
+
+  },
+  created: function() {
+    window.addEventListener('keyup', this.checkinput)
+
   },
   beforeDestroy() {
     clearTimeout(this.timeout)
-  }
+  },
+
 
 })

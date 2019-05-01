@@ -12,75 +12,21 @@
 <body>
 
   <div id="app">
+
+
     <h1>Slot Game!</h1>
-    <div class="machinecenter">
-      <table id="reelsborders">
-        <tr>
-          <td class="opacity"><img src="./img/3.png" name="left1"></td>
-          <td class="opacity"><img src="./img/3.png" name="center1"></td>
-          <td class="opacity"><img src="./img/3.png" name="right1"></td>
-        </tr>
-        <tr>
-          <td><img src="./img/3.png" name="left2"></td>
-          <td><img src="./img/3.png" name="center2"></td>
-          <td><img src="./img/3.png" name="right2"></td>
-        </tr>
-        <tr>
-          <td class="opacity"><img src="./img/3.png" name="left3"></td>
-          <td class="opacity"><img src="./img/3.png" name="center3"></td>
-          <td class="opacity"><img src="./img/3.png" name="right3"></td>
-        </tr>
-      </table>
-    </div>
+    <h2>Balance <span id="currentbalance">{{balance}}</span> coins</h1>
 
-
-    <div class="center">
-
-      <div class="toggle-button-cover">
-        <div class="button-cover">
-          <div class="button r" id="button-1">
-            <input type="checkbox" class="checkbox" @click="isHidden = !isHidden">
-            <div class="knobs"></div>
-            <div class="layer"></div>
-          </div>
-          <span id="coins">Change mode</span>
-        </div>
-      </div>
-      <div v-if="!isHidden">
-
-        <button :disabled="disabled" @click="delay" class="buttonspin" type="button" name="button">Spin</button>
-        <h2>Balance</h1>
+      <div class="randommodecenterelements" v-if="!isHidden">
+          <button :disabled="disabled" @click="delay" class="buttonspin" type="button" name="button">Spin</button>
           <span id="coins">Enter balance:</span>
-          <input id="balanceinputchecked" v-model="balance" type="text"> <span id="coins">coins</span>
-          <hr>
-
-
-
-
-          <div id="tableinfo" class="container">
-            <h2>Payments</h1>
-              <table id="infotable" class="table table-dark">
-                <thead>
-                  <tr>
-                    <th>History of wins</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                  </tr>
-                  <tr>
-                  </tr>
-                  <tr>
-                  </tr>
-                </tbody>
-              </table>
-          </div>
+          <input v-on:keypress="checkinput(event)" id="balanceinputchecked" v-model="balance" type="text"> <span id="coins">coins</span>
       </div>
 
-      <div v-if="isHidden">
-        <span id="coins">Enter balance:</span>
 
-        <input id="balanceinputchecked" v-model="balance" type="text">
+      <div class="fixedmodcenter" v-if="isHidden">
+        <span id="coins">Enter balance:</span>
+        <input v-on:keypress="checkinput(event)" id="balanceinputchecked" v-model="balance" type="text">
 
         <span id="coins">Reel:</span>
         <select id="dropdownreels">
@@ -104,27 +50,63 @@
           <option value="7">7</option>
           <option value="CHERRY">CHERRY</option>
         </select>
-        <button :disabled="disabled" @click="delaytest" class="buttontest" type="button" name="button" >Test</button>
-        <hr>
-        <div id="tableinfo" class="container">
-          <h2>Payments</h1>
-            <table id="infotable" class="table table-dark">
-              <thead>
-                <tr>
-                  <th>History of wins</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                </tr>
-                <tr>
-                </tr>
-                <tr>
-                </tr>
-              </tbody>
-            </table>
+        <button :disabled="disabled" @click="delaytest" class="buttontest" type="button" name="button">Test</button>
+      </div>
+
+      <div class="machinecenter">
+        <table id="reelsborders">
+          <tr>
+            <td class="opacity"><img src="./img/3.png" name="left1"></td>
+            <td class="opacity"><img src="./img/3.png" name="center1"></td>
+            <td class="opacity"><img src="./img/3.png" name="right1"></td>
+          </tr>
+          <tr>
+            <td><img src="./img/3.png" name="left2"></td>
+            <td><img src="./img/3.png" name="center2"></td>
+            <td><img src="./img/3.png" name="right2"></td>
+          </tr>
+          <tr>
+            <td class="opacity"><img src="./img/3.png" name="left3"></td>
+            <td class="opacity"><img src="./img/3.png" name="center3"></td>
+            <td class="opacity"><img src="./img/3.png" name="right3"></td>
+          </tr>
+        </table>
+      </div>
+
+
+
+      <div class="toggle-button-cover">
+        <div class="button-cover">
+          <div class="button r" id="button-1">
+            <input type="checkbox" class="checkbox" @click="isHidden = !isHidden">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+          <span id="coins">Change mode</span>
         </div>
       </div>
+
+      <div id="tableinfo" class="container">
+        <h2>Payments</h1>
+          <table id="infotable" class="table table-dark">
+            <thead>
+              <tr>
+                <th>History of wins</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              </tr>
+              <tr>
+              </tr>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <hr>
+
 
       <div class="container">
         <h2>Prizes</h2>
@@ -157,26 +139,13 @@
           </tr>
         </table>
       </div>
-    </div>
   </div>
+  </div>
+
+  <hr>
+
 
 </body>
 
 <script src="main.js"></script>
-<script type="text/javascript">
-  let input = document.getElementById('balanceinputchecked');
-
-  input.addEventListener('keyup', function() {
-    if (this.value > 5000) {
-      let arr = this.value.split('');
-      arr = arr.slice(0, arr.length - 1);
-      this.value = arr.join('');
-    } else if (this.value < 1) {
-      let arr = this.value.split('');
-      arr = arr.slice(0, arr.length - 1);
-      this.value = arr.join('');
-    }
-  })
-</script>
-
 </html>
