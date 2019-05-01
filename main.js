@@ -7,22 +7,18 @@ new Vue({
     timeout: null
   },
   methods: {
-
     sleep: function(ms) {
       return new Promise(res => setTimeout(res, ms));
     },
-
     slotmachinerandom: async function() {
       //Random mode slotmachine
       //async for await function to get a "pause" in a thread
-
 
       //Payment table
       var table = document.getElementById("infotable");
 
       //Mark win balance
       var span = document.getElementById('currentbalance')
-
 
       //Path to images
       var Directory = "./img/";
@@ -246,8 +242,6 @@ new Vue({
 
         }
 
-
-
         await this.sleep(500);
 
         //Third line matching
@@ -360,15 +354,12 @@ new Vue({
       }
 
     },
-
     slotmachinefixedmode: function(event) {
       //Random mode slotmachine
 
-
       //Payment table as well
       var table = document.getElementById("infotable");
-
-
+      ъ
       //Path to images
       var Directory = "./img/";
       var list = new Array();
@@ -728,9 +719,6 @@ new Vue({
         alert("Not enough balance!");
       }
 
-
-
-
     },
 
     //To Avoid multiclicking and got a second "pause" between clicks
@@ -739,7 +727,7 @@ new Vue({
 
       this.timeout = setTimeout(() => {
         this.disabled = false
-      }, 4000)
+      }, 4500)
 
       this.slotmachinerandom();
     },
@@ -778,6 +766,7 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
 
         } else if ((final_left1 == './img/3.png') && (final_left1 == final_center1) && (final_left1 == final_right1)) {
@@ -788,6 +777,7 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
 
         } else if ((final_left1 == './img/2.png') && (final_left1 == final_center1) && (final_left1 == final_right1)) {
           var row = table.insertRow(1);
@@ -797,6 +787,8 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left1 == './img/1.png') && (final_left1 == final_center1) && (final_left1 == final_right1)) {
           var row = table.insertRow(1);
@@ -806,6 +798,8 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left1 == './img/0.png') && (final_left1 == final_center1) && (final_left1 == final_right1)) {
           var row = table.insertRow(1);
@@ -815,6 +809,8 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
+
 
         } else if (((final_left1 == './img/0.png') || (final_left1 == './img/1.png') || (final_left1 == './img/2.png')) &&
           ((final_center1 == './img/0.png') || (final_center1 == './img/1.png') || (final_center1 == './img/2.png')) &&
@@ -826,6 +822,8 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
+
 
 
         } else if (((final_left1 == './img/3.png') || (final_left1 == './img/4.png')) &&
@@ -838,6 +836,8 @@ new Vue({
           document.right1.classList.add("win");
           document.center1.classList.add("win");
           document.left1.classList.add("win");
+          span.classList.add("win");
+
 
         }
 
@@ -863,6 +863,8 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left2 == './img/3.png') && (final_left2 == final_center2) && (final_left2 == final_right2)) {
           var row = table.insertRow(1);
@@ -872,6 +874,8 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left2 == './img/2.png') && (final_left2 == final_center2) && (final_left2 == final_right2)) {
           var row = table.insertRow(1);
@@ -881,6 +885,8 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left2 == './img/1.png') && (final_left2 == final_center2) && (final_left2 == final_right2)) {
           var row = table.insertRow(1);
@@ -890,6 +896,8 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left2 == './img/0.png') && (final_left2 == final_center2) && (final_left2 == final_right2)) {
           var row = table.insertRow(1);
@@ -899,6 +907,8 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
+
 
         } else if (((final_left2 == './img/0.png') || (final_left2 == './img/1.png') || (final_left2 == './img/2.png')) &&
           ((final_center2 == './img/0.png') || (final_center2 == './img/1.png') || (final_center2 == './img/2.png')) &&
@@ -910,6 +920,8 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
+
 
         } else if (((final_left2 == './img/3.png') || (final_left2 == './img/4.png')) &&
           ((final_center2 == './img/3.png') || (final_center2 == './img/4.png')) &&
@@ -921,12 +933,12 @@ new Vue({
           document.right2.classList.add("win");
           document.center2.classList.add("win");
           document.left2.classList.add("win");
+          span.classList.add("win");
+
 
         }
 
-
         await this.sleep(500);
-
 
         //Third line matching
         var finalleft3 = document.left3.src
@@ -947,6 +959,8 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left3 == './img/3.png') && (final_left3 == final_center3) && (final_left3 == final_right3)) {
           var row = table.insertRow(1);
@@ -956,6 +970,8 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left3 == './img/2.png') && (final_left3 == final_center3) && (final_left3 == final_right3)) {
           var row = table.insertRow(1);
@@ -965,6 +981,8 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left3 == './img/1.png') && (final_left1 == final_center1) && (final_left3 == final_right3)) {
           var row = table.insertRow(1);
@@ -974,6 +992,8 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
+
 
         } else if ((final_left3 == './img/0.png') && (final_left3 == final_center3) && (final_left3 == final_right3)) {
           var row = table.insertRow(1);
@@ -983,6 +1003,8 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
+
 
         } else if (((final_left3 == './img/0.png') || (final_left3 == './img/1.png') || (final_left3 == './img/2.png')) &&
           ((final_center3 == './img/0.png') || (final_center3 == './img/1.png') || (final_center3 == './img/2.png')) &&
@@ -994,6 +1016,8 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
+
 
         } else if (((final_left3 == './img/3.png') || (final_left3 == './img/4.png')) &&
           ((final_center3 == './img/3.png') || (final_center3 == './img/4.png')) &&
@@ -1005,10 +1029,11 @@ new Vue({
           document.right3.classList.add("win");
           document.center3.classList.add("win");
           document.left3.classList.add("win");
+          span.classList.add("win");
+
         }
 
         await this.sleep(1000);
-
 
         //Remove marking of the win
         document.right1.classList.remove("win");
@@ -1022,6 +1047,13 @@ new Vue({
         document.right3.classList.remove("win");
         document.center3.classList.remove("win");
         document.left3.classList.remove("win");
+
+        if (span.classList.contains("win")) {
+          span.classList.remove("win");
+
+        } else if (!span.classList.contains("win")) {
+
+        }
 
       } else {
         alert("Not enough balance!")
@@ -1052,8 +1084,8 @@ new Vue({
 
       evt = (evt) ? evt : window.event;
       var charCode = (evt.which) ? evt.which : evt.keyCode;
-      if ((charCode > 31 && (charCode < 48 || charCode > 57)) && charCode !== 46) {
-        evt.preventDefault();;
+      if ((charCode > 31 && (charCode < 48 || charCode > 57)) || charCode == 46) {
+        evt.preventDefault();
       } else {
         return true;
       }
@@ -1067,6 +1099,4 @@ new Vue({
   beforeDestroy() {
     clearTimeout(this.timeout)
   },
-
-
 })
